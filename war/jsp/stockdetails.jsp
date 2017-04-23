@@ -145,7 +145,7 @@
 	<logic:notEmpty name="orderform" property="pmid">
 	<tr>
 		<td>PMID:&nbsp;</td>
-		<td><a href="http://www.ncbi.nlm.nih.gov/pubmed/<bean:write name="orderform" property="pmid" />" target="_blank"><bean:write name="orderform" property="pmid" /></a></td>
+		<td><a href="https://www.ncbi.nlm.nih.gov/pubmed/<bean:write name="orderform" property="pmid" />" target="_blank"><bean:write name="orderform" property="pmid" /></a></td>
 	</tr>
 	</logic:notEmpty>
 	

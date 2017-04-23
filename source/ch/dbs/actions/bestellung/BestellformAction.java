@@ -734,8 +734,8 @@ public final class BestellformAction extends DispatchAction {
 
                             if (of.getDoi() != null && !of.getDoi().equals("")) {
                                 m.append("DOI: " + of.getDoi() + '\n');
-                                if (!doi.extractDoi(of.getDoi()).contains("http://")) {
-                                    m.append("DOI-URI: http://dx.doi.org/");
+                                if (!doi.extractDoi(of.getDoi()).contains("http")) {
+                                    m.append("DOI-URI: https://doi.org/");
                                     m.append(doi.extractDoi(of.getDoi()));
                                     m.append('\n');
                                 } else {
@@ -747,7 +747,7 @@ public final class BestellformAction extends DispatchAction {
                             if (of.getPmid() != null && !of.getPmid().equals("")) {
                                 m.append("PMID: ");
                                 m.append(of.getPmid());
-                                m.append("\nPMID-URI: http://www.ncbi.nlm.nih.gov/pubmed/");
+                                m.append("\nPMID-URI: https://www.ncbi.nlm.nih.gov/pubmed/");
                                 m.append(pubmed.extractPmid(of.getPmid()));
                                 m.append('\n');
                             }
@@ -806,8 +806,8 @@ public final class BestellformAction extends DispatchAction {
 
                             if (of.getDoi() != null && !of.getDoi().equals("")) {
                                 m.append("DOI: " + of.getDoi() + '\n');
-                                if (!doi.extractDoi(of.getDoi()).contains("http://")) {
-                                    m.append("DOI-URI: http://dx.doi.org/");
+                                if (!doi.extractDoi(of.getDoi()).contains("http")) {
+                                    m.append("DOI-URI: https://doi.org/");
                                     m.append(doi.extractDoi(of.getDoi()));
                                     m.append('\n');
                                 } else {

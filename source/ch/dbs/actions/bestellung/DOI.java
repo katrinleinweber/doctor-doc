@@ -44,7 +44,9 @@ public class DOI {
                 if (doi.contains("dx.doi.org/")) {
                     doi = doi.substring(doi.indexOf("dx.doi.org/") + 11);
                 } // verschiedene Formen der Angaben entfernen ( dx.doi.org/... , http://dx.doi.org/...)
-                if (doi.contains("doi/")) {
+                if (doi.contains("doi.org/")) {
+                    doi = doi.substring(doi.indexOf("doi.org/") + 8);
+                } // verschiedene Formen der Angaben entfernen ( doi.org/... , https://doi.org/...)                if (doi.contains("doi/")) {
                     doi = doi.substring(doi.indexOf("doi/") + 4);
                 } // ggf. Text "DOI/" entfernen
 

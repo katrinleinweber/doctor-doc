@@ -197,7 +197,7 @@
          <tr>
         <th id="th-left">PMID</th>
       </tr>
-      <tr><td id="border"><a href="http://www.ncbi.nlm.nih.gov/pubmed/<bean:write name="orderform" property="bestellung.pmid" />" target="_blank"><bean:write name="orderform" property="bestellung.pmid" /></a>&nbsp;</td></tr>
+      <tr><td id="border"><a href="https://www.ncbi.nlm.nih.gov/pubmed/<bean:write name="orderform" property="bestellung.pmid" />" target="_blank"><bean:write name="orderform" property="bestellung.pmid" /></a>&nbsp;</td></tr>
     </table>
   </logic:notEmpty>
   </td>
@@ -208,7 +208,7 @@
          <tr>
         <th id="th-left">DOI</th>
       </tr>
-      <tr><td id="border"><a href="http://dx.doi.org/<% out.println(crossref.replaceAll("info:doi/", "").replaceAll("http://dx.doi.org/", "").replaceAll("doi:", "").trim()); %>" target="_blank">http://dx.doi.org/<% out.println(crossref.replaceAll("info:doi/", "").replaceAll("http://dx.doi.org/", "").replaceAll("doi:", "").trim()); %></a>&nbsp;</td></tr>
+      <tr><td id="border"><a href="https://doi.org/<% out.println(crossref.replaceAll("info:doi/", "").replaceAll("http://dx.doi.org/", "").replaceAll("https://doi.org/", "").replaceAll("doi:", "").trim()); %>" target="_blank">https://doi.org/<% out.println(crossref.replaceAll("info:doi/", "").replaceAll("http://dx.doi.org/", "").replaceAll("https://doi.org/", "").replaceAll("doi:", "").trim()); %></a>&nbsp;</td></tr>
     </table>
   </logic:notEmpty>
   </td>

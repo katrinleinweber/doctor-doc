@@ -636,7 +636,7 @@ public final class ILVReport extends DispatchAction {
         if (ilvf.getPmid() != null && !"".equals(ilvf.getPmid())) {
             result.append("PMID: ");
             result.append(ilvf.getPmid());
-            result.append("\nPMID-URI: http://www.ncbi.nlm.nih.gov/pubmed/");
+            result.append("\nPMID-URI: https://www.ncbi.nlm.nih.gov/pubmed/");
             result.append(pubmed.extractPmid(ilvf.getPmid()));
             result.append('\n');
         }
@@ -644,8 +644,8 @@ public final class ILVReport extends DispatchAction {
             result.append("DOI: ");
             result.append(ilvf.getDoi());
             result.append('\n');
-            if (!doi.extractDoi(ilvf.getDoi()).contains("http://")) {
-                result.append("DOI-URI: http://dx.doi.org/");
+            if (!doi.extractDoi(ilvf.getDoi()).contains("http")) {
+                result.append("DOI-URI: https://doi.org/");
                 result.append(doi.extractDoi(ilvf.getDoi()));
                 result.append('\n');
             } else {
